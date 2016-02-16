@@ -5969,19 +5969,19 @@
             }
             if(v.dtype === "full") {
                 pickbase = "full";
-                rollbase = "@{wtype}&{template:atkdmg} {{mod=@{atkbonus}}} {{rname=@{atkname}}} {{r1=[[@{hidden_r1base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{hidden_r2base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} {{crit1=[[@{hidden_crit1}]]}} {{crit2=[[@{hidden_crit2}]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{charname_output}";
+                rollbase = "@{wtype}&{template:npcaction} {{mod=@{atkbonus}}} {{rname=@{atkname}}} {{r1=[[@{hidden_r1base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{hidden_r2base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} {{crit1=[[@{hidden_crit1}]]}} {{crit2=[[@{hidden_crit2}]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{charname_output}";
             }
             else if(v.repeating_attack_atkflag && v.repeating_attack_atkflag != 0) {
                 pickbase = "pick";
-                rollbase = "@{wtype}&{template:atk} {{mod=@{atkbonus}}} {{rname=[@{atkname}](~repeating_attack_attack_dmg)}} {{rnamec=[@{atkname}](~repeating_attack_attack_crit)}} {{r1=[[@{hidden_r1base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{hidden_r2base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} {{range=@{atkrange}}} {{desc=@{atk_desc}}} @{charname_output}";
+                rollbase = "@{wtype}&{template:npcatk} {{mod=@{atkbonus}}} {{rname=[@{atkname}](~repeating_attack_attack_dmg)}} {{rnamec=[@{atkname}](~repeating_attack_attack_crit)}} {{r1=[[@{hidden_r1base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{hidden_r2base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} {{range=@{atkrange}}} {{desc=@{atk_desc}}} @{charname_output}";
             }
             else if(v.repeating_attack_dmgflag && v.repeating_attack_dmgflag != 0) {
                 pickbase = "dmg";
-                rollbase = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{charname_output}"
+                rollbase = "@{wtype}&{template:npcdmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{charname_output}"
             }
             else {
                 pickbase = "empty";
-                rollbase = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{saveflag} {{desc=@{atk_desc}}} @{charname_output}"
+                rollbase = "@{wtype}&{template:npcdmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{saveflag} {{desc=@{atk_desc}}} @{charname_output}"
             }
             update["repeating_attack_atkname"] = name;
             update["repeating_attack_atkbonus"] = bonus;
