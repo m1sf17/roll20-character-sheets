@@ -3559,7 +3559,7 @@
 <!-- ROLL TEMPLATES -->
 <div class="rolltemplates">
     
-    <rolltemplate class="sheet-rolltemplate-simple">
+    <rolltemplate class="sheet-rolltemplate-simple-old">
         <div class="container">
             <div class="result">
                 {{#always}}
@@ -3646,7 +3646,7 @@
         </div>
     </rolltemplate>
 
-    <rolltemplate class="sheet-rolltemplate-atk">
+    <rolltemplate class="sheet-rolltemplate-atk-old">
         <div class="container">
             <div class="result">
                 {{#always}}
@@ -3764,7 +3764,7 @@
         {{/desc}}
     </rolltemplate>
     
-    <rolltemplate class="sheet-rolltemplate-dmg">
+    <rolltemplate class="sheet-rolltemplate-dmg-old">
         {{#save}}
             {{#attack}}
                 <div class="desc save">
@@ -3853,7 +3853,7 @@
         </div>
     </rolltemplate>
     
-    <rolltemplate class="sheet-rolltemplate-atkdmg">
+    <rolltemplate class="sheet-rolltemplate-atkdmg-old">
         {{#attack}}
             <div class="container atk">
                 <div class="result">
@@ -4113,7 +4113,7 @@
         {{/damage}}
     </rolltemplate>
     
-    <rolltemplate class="sheet-rolltemplate-spell">
+    <rolltemplate class="sheet-rolltemplate-spell-old">
         <div class="container">
             <div class="title row">
                 <span>{{name}}</span>
@@ -4165,6 +4165,46 @@
     </rolltemplate>
     
     <rolltemplate class="sheet-rolltemplate-npc">
+        <div class="row header">
+            <span>{{rname}}</span>
+        </div>
+        <div class="row subheader">
+            <span class="italics">{{name}}</span>
+        </div>
+        <div class="arrow-right"></div>
+        <div class="row">
+            {{#normal}}
+                <span class="italics">{{rname}}: </span><span>{{r1}}</span>
+            {{/normal}}
+            {{#always}}
+                <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+            {{/always}}
+            {{#advantage}}
+                {{#rollLess() r1 r2}}
+                    <span class="italics">{{rname}}: </span><span class="grey">{{r1}}</span><span> | </span><span>{{r2}}</span>
+                {{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}
+                    <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+                {{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}
+                    <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span class="grey">{{r2}}</span>
+                {{/rollGreater() r1 r2}}
+            {{/advantage}}
+            {{#disadvantage}}
+                {{#rollLess() r1 r2}}
+                    <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span class="grey">{{r2}}</span>
+                {{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}
+                    <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+                {{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}
+                    <span class="italics">{{rname}}: </span><span class="grey">{{r1}}</span><span> | </span><span>{{r2}}</span>
+                {{/rollGreater() r1 r2}}
+            {{/disadvantage}}
+        </div>
+    </rolltemplate>
+    
+    <rolltemplate class="sheet-rolltemplate-spell">
         <div class="row header">
             <span>{{rname}}</span>
         </div>
@@ -4292,6 +4332,109 @@
         {{/description}}
     </rolltemplate>
     
+    <rolltemplate class="sheet-rolltemplate-atk">
+        <div class="row header">
+            {{#normal}}
+                {{#rollWasCrit() r1}}{{rnamec}}{{/rollWasCrit() r1}}
+                {{#^rollWasCrit() r1}}{{rname}}{{/^rollWasCrit() r1}}
+            {{/normal}}
+            {{#always}}
+                {{#rollLess() r1 r2}}{{#rollWasCrit() r2}}{{rnamec}}{{/rollWasCrit() r2}}{{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}}{{rnamec}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}{{#rollWasCrit() r1}}{{rnamec}}{{/rollWasCrit() r1}}{{/rollGreater() r1 r2}}
+                {{#^rollWasCrit() r1}}{{#^rollWasCrit() r2}}{{rname}}{{/^rollWasCrit() r2}}{{/^rollWasCrit() r1}}
+            {{/always}}
+            {{#advantage}}
+                {{#rollLess() r1 r2}}{{#rollWasCrit() r2}}{{rnamec}}{{/rollWasCrit() r2}}{{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}}{{rnamec}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}{{#rollWasCrit() r1}}{{rnamec}}{{/rollWasCrit() r1}}{{/rollGreater() r1 r2}}
+                {{#^rollWasCrit() r1}}{{#^rollWasCrit() r2}}{{rname}}{{/^rollWasCrit() r2}}{{/^rollWasCrit() r1}}
+            {{/advantage}}
+            {{#disadvantage}}
+                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}}{{rnamec}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                {{#rollTotal() r1 r2}}{{#^rollWasCrit() r1}}{{rname}}{{/^rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                {{#rollLess() r1 r2}}{{rname}}{{/rollLess() r1 r2}}
+                {{#rollGreater() r1 r2}}{{rnamec}}{{/rollGreater() r1 r2}}
+            {{/disadvantage}}
+        </div>
+        <div class="row subheader">
+            <span class="italics">{{name}}</span>
+        </div>
+        <div class="arrow-right"></div>
+        <div class="row">
+            {{#normal}}
+                {{#rollWasCrit() r1}}<span class="italics">{{rnamec}}: </span>{{/rollWasCrit() r1}}
+                {{#^rollWasCrit() r1}}<span class="italics">{{rname}}: </span>{{/^rollWasCrit() r1}}
+            {{/normal}}
+            {{#always}}
+                {{#rollLess() r1 r2}}{{#rollWasCrit() r2}}<span class="italics">{{rnamec}}: </span>{{/rollWasCrit() r2}}{{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}}<span class="italics">{{rnamec}}: </span>{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}{{#rollWasCrit() r1}}<span class="italics">{{rnamec}}: </span>{{/rollWasCrit() r1}}{{/rollGreater() r1 r2}}
+                {{#^rollWasCrit() r1}}{{#^rollWasCrit() r2}}<span class="italics">{{rname}}: </span>{{/^rollWasCrit() r2}}{{/^rollWasCrit() r1}}
+            {{/always}}
+            {{#advantage}}
+                {{#rollLess() r1 r2}}{{#rollWasCrit() r2}}<span class="italics">{{rnamec}}: </span>{{/rollWasCrit() r2}}{{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}}<span class="italics">{{rnamec}}: </span>{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}{{#rollWasCrit() r1}}<span class="italics">{{rnamec}}: </span>{{/rollWasCrit() r1}}{{/rollGreater() r1 r2}}
+                {{#^rollWasCrit() r1}}{{#^rollWasCrit() r2}}<span class="italics">{{rname}}: </span>{{/^rollWasCrit() r2}}{{/^rollWasCrit() r1}}
+            {{/advantage}}
+            {{#disadvantage}}
+                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}}<span class="italics">{{rnamec}}: </span>{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                {{#rollTotal() r1 r2}}{{#^rollWasCrit() r1}}<span class="italics">{{rname}}: </span>{{/^rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                {{#rollLess() r1 r2}}<span class="italics">{{rname}}: </span>{{/rollLess() r1 r2}}
+                {{#rollGreater() r1 r2}}<span class="italics">{{rnamec}}: </span>{{/rollGreater() r1 r2}}
+            {{/disadvantage}}
+            {{#normal}}
+                <span>{{r1}}</span>
+            {{/normal}}
+            {{#always}}
+                <span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+            {{/always}}
+            {{#advantage}}
+                {{#rollLess() r1 r2}}
+                    <span class="grey">{{r1}}</span><span> | </span><span>{{r2}}</span>
+                {{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}
+                    <span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+                {{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}
+                    <span>{{r1}}</span><span> | </span><span class="grey">{{r2}}</span>
+                {{/rollGreater() r1 r2}}
+            {{/advantage}}
+            {{#disadvantage}}
+                {{#rollLess() r1 r2}}
+                    <span>{{r1}}</span><span> | </span><span class="grey">{{r2}}</span>
+                {{/rollLess() r1 r2}}
+                {{#rollTotal() r1 r2}}
+                    <span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+                {{/rollTotal() r1 r2}}
+                {{#rollGreater() r1 r2}}
+                    <span class="grey">{{r1}}</span><span> | </span><span>{{r2}}</span>
+                {{/rollGreater() r1 r2}}
+            {{/disadvantage}}
+        </div>
+        {{#description}}
+            <div class="row">
+                <span class="desc">{{description}}</span>
+            </div>
+        {{/description}}
+    </rolltemplate>
+    
+    <rolltemplate class="sheet-rolltemplate-dmg">    
+        <div class="container dmgcontainer damagetemplate">
+            <span class="italics">Damage: </span>
+            <span>
+                {{#dmg1flag}}
+                    {{dmg1}}{{#crit}} + {{crit1}}{{/crit}}{{dmg1type}}
+                {{/dmg1flag}}
+                {{#dmg1flag}}{{#dmg2flag}}+{{/dmg2flag}}{{/dmg1flag}}
+                {{#dmg2flag}}
+                    {{dmg2}}{{#crit}} + {{crit2}}{{/crit}}{{dmg2type}}
+                {{/dmg2flag}}
+            </span>
+        </div>
+    </rolltemplate> 
+    
     <rolltemplate class="sheet-rolltemplate-npcdmg">    
         <div class="container dmgcontainer damagetemplate">
             <span class="italics">Damage: </span>
@@ -4308,6 +4451,101 @@
     </rolltemplate> 
     
     <rolltemplate class="sheet-rolltemplate-npcaction">
+        <div class="container">
+            <div class="row header">
+                <span>{{rname}}</span>
+            </div>
+            <div class="row subheader">
+                <span class="italics">{{name}}</span>
+            </div>
+            <div class="arrow-right"></div>
+            {{#attack}}
+                <div class="row">
+                    {{#normal}}
+                        <span class="italics">Attack: </span><span>{{r1}}</span>
+                    {{/normal}}
+                    {{#always}}
+                        <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+                    {{/always}}
+                    {{#advantage}}
+                        {{#rollLess() r1 r2}}
+                            <span class="italics">{{rname}}: </span><span class="grey">{{r1}}</span><span> | </span><span>{{r2}}</span>
+                        {{/rollLess() r1 r2}}
+                        {{#rollTotal() r1 r2}}
+                            <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+                        {{/rollTotal() r1 r2}}
+                        {{#rollGreater() r1 r2}}
+                            <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span class="grey">{{r2}}</span>
+                        {{/rollGreater() r1 r2}}
+                    {{/advantage}}
+                    {{#disadvantage}}
+                        {{#rollLess() r1 r2}}
+                            <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span class="grey">{{r2}}</span>
+                        {{/rollLess() r1 r2}}
+                        {{#rollTotal() r1 r2}}
+                            <span class="italics">{{rname}}: </span><span>{{r1}}</span><span> | </span><span>{{r2}}</span>
+                        {{/rollTotal() r1 r2}}
+                        {{#rollGreater() r1 r2}}
+                            <span class="italics">{{rname}}: </span><span class="grey">{{r1}}</span><span> | </span><span>{{r2}}</span>
+                        {{/rollGreater() r1 r2}}
+                    {{/disadvantage}}
+                </div>
+            {{/attack}}
+            {{#description}}
+                <span class="desc">{{description}}</span>
+            {{/description}}
+            </div>
+            {{#damage}}
+                <div class="container dmgcontainer damagetemplate">
+                    <span class="italics">Damage: </span>
+                    <span>
+                        {{#dmg1flag}}
+                            {{dmg1}} 
+                            {{#normal}}
+                                {{#rollWasCrit() r1}} + {{crit1}}{{/rollWasCrit() r1}}
+                            {{/normal}}
+                            {{#always}}
+                                {{#rollLess() r1 r2}}{{#rollWasCrit() r2}} + {{crit1}}{{/rollWasCrit() r2}}{{/rollLess() r1 r2}}
+                                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}} + {{crit1}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                                {{#rollGreater() r1 r2}}{{#rollWasCrit() r1}} + {{crit1}}{{/rollWasCrit() r1}}{{/rollGreater() r1 r2}}
+                            {{/always}}
+                            {{#advantage}}
+                                {{#rollLess() r1 r2}}{{#rollWasCrit() r2}} + {{crit1}}{{/rollWasCrit() r2}}{{/rollLess() r1 r2}}
+                                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}} + {{crit1}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                                {{#rollGreater() r1 r2}}{{#rollWasCrit() r1}} + {{crit1}}{{/rollWasCrit() r1}}{{/rollGreater() r1 r2}}
+                            {{/advantage}}
+                            {{#disadvantage}}
+                                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}} + {{crit1}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                            {{/disadvantage}}
+                            {{dmg1type}}
+                        {{/dmg1flag}}
+                        {{#dmg1flag}}{{#dmg2flag}}+{{/dmg2flag}}{{/dmg1flag}}
+                        {{#dmg2flag}}
+                            {{dmg2}} 
+                            {{#normal}}
+                                {{#rollWasCrit() r1}} + {{crit2}}{{/rollWasCrit() r1}}
+                            {{/normal}}
+                            {{#always}}
+                                {{#rollLess() r1 r2}}{{#rollWasCrit() r2}} + {{crit2}}{{/rollWasCrit() r2}}{{/rollLess() r1 r2}}
+                                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}} + {{crit2}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                                {{#rollGreater() r1 r2}}{{#rollWasCrit() r1}} + {{crit2}}{{/rollWasCrit() r1}}{{/rollGreater() r1 r2}}
+                            {{/always}}
+                            {{#advantage}}
+                                {{#rollLess() r1 r2}}{{#rollWasCrit() r2}} + {{crit2}}{{/rollWasCrit() r2}}{{/rollLess() r1 r2}}
+                                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}} + {{crit2}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                                {{#rollGreater() r1 r2}}{{#rollWasCrit() r1}} + {{crit2}}{{/rollWasCrit() r1}}{{/rollGreater() r1 r2}}
+                            {{/advantage}}
+                            {{#disadvantage}}
+                                {{#rollTotal() r1 r2}}{{#rollWasCrit() r1}} + {{crit2}}{{/rollWasCrit() r1}}{{/rollTotal() r1 r2}}
+                            {{/disadvantage}}
+                            {{dmg2type}}
+                        {{/dmg2flag}}
+                    </span>
+                </div>
+            {{/damage}}
+    </rolltemplate>
+
+    <rolltemplate class="sheet-rolltemplate-simple">
         <div class="container">
             <div class="row header">
                 <span>{{rname}}</span>
