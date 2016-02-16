@@ -1638,6 +1638,28 @@ button[type=roll] * {
     border: 1px solid black;
 }
 
+.sheet-rolltemplate-npcaction .sheet-thistle,
+.sheet-rolltemplate-npc .sheet-thistle,
+.sheet-rolltemplate-npcatk .sheet-thistle,
+.sheet-rolltemplate-npcdmg .sheet-thistle {
+    position: absolute;
+    width: 97%;
+    height: 97%;
+    background: url(http://blog2.greensplus.com/wp-content//Milk-Thistle-resized-600.png) top left;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0.4;
+}
+
+.sheet-rolltemplate-npcaction .sheet-thistle-container,
+.sheet-rolltemplate-npc .sheet-thistle-container,
+.sheet-rolltemplate-npcatk .sheet-thistle-container,
+.sheet-rolltemplate-npcdmg .sheet-thistle-container {
+    position: relative;
+}
+
 .withoutavatars .sheet-rolltemplate-spell .sheet-container {
     margin-left: -15px;
 }
@@ -2016,10 +2038,11 @@ button[type=roll] * {
 .sheet-rolltemplate-npcatk,
 .sheet-rolltemplate-npcdmg
 {
-    width: 188px;
+    width: 90%;
     border: 1px solid;
     background-color: #ffffff;
     padding: 5px;
+    position: relative;
 }
 
 .sheet-rolltemplate-npcaction .sheet-container.sheet-dmgcontainer
