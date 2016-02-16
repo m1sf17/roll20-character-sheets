@@ -4205,6 +4205,10 @@
     </rolltemplate>
     
     <rolltemplate class="sheet-rolltemplate-npcatk">
+        {{#thistle}}
+        <div class="thistle"></div>
+        <div class="thistle-container">
+        {{/thistle}}
         <div class="row header">
             {{#normal}}
                 {{#rollWasCrit() r1}}{{rnamec}}{{/rollWasCrit() r1}}
@@ -4290,6 +4294,9 @@
                 <span class="desc">{{description}}</span>
             </div>
         {{/description}}
+        {{#thistle}}
+        </div>
+        {{/thistle}}
     </rolltemplate>
     
     <rolltemplate class="sheet-rolltemplate-npcdmg">    
