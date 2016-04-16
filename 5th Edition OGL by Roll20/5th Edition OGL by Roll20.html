@@ -1180,8 +1180,8 @@
                     <input type="hidden" name="attr_hidden_crit2">
                     <input type="hidden" name="attr_hldmg">
                     <input type="hidden" name="attr_rollbase">
-                    <button type="roll" name="roll_attack_dmg" style="display: none;" value="@{wtype}&{template:npcdmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{charname_output}"></button>
-                    <button type="roll" name="roll_attack_crit" style="display: none;" value="@{wtype}&{template:npcdmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} {{crit1=[[@{hidden_crit1}]]}} {{crit2=[[@{hidden_crit2}]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{charname_output}"></button>
+                    <button type="roll" name="roll_attack_dmg" style="display: none;" value="@{wtype}&{template:npcdmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} @{saveflag} {{description=@{atk_desc}}} @{hldmg} @{charname_output}"></button>
+                    <button type="roll" name="roll_attack_crit" style="display: none;" value="@{wtype}&{template:npcdmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} {{crit1=[[@{hidden_crit1}]]}} {{crit2=[[@{hidden_crit2}]]}} @{saveflag} {{description=@{atk_desc}}} @{hldmg} @{charname_output}"></button>
                     <input type="hidden" name="attr_itemid">
                     <input type="hidden" name="attr_spellid">
                 </fieldset>
@@ -4294,6 +4294,11 @@
                 <span class="desc">{{description}}</span>
             </div>
         {{/description}}
+        {{#desc}}
+            <div class="row">
+                <span class="desc">{{desc}}</span>
+            </div>
+        {{/desc}}
         {{#thistle}}
         </div>
         {{/thistle}}
