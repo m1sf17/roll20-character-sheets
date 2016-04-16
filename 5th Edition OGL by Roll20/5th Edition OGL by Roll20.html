@@ -194,7 +194,7 @@
                     <option value="@{wisdom_mod}+" data-i18n="wisdom-u">WISDOM</option>
                     <option value="@{charisma_mod}+" data-i18n="charisma-u">CHARISMA</option>
                 </select>
-            </div> 
+            </div>
             <div class="npcspelloptions">
                 <span data-i18n="spell-dc-u">SPELL DC</span>
                 <input class="num" type="text" name="attr_npc_spelldc" placeholder="10">
@@ -514,7 +514,7 @@
                 <div class="trait">
                     <input type="text" name="attr_name" placeholder="False Appearance." data-i18n-place="npc-trait-name-place">
                     <textarea name="attr_desc" placeholder="If the dragon fails..." data-i18n-place="npc-trait-desc-place"></textarea>
-                </div>  
+                </div>
             </fieldset>
         </div>
     </div>
@@ -607,7 +607,7 @@
                 <div class="trait">
                     <input type="text" name="attr_name" placeholder="Parry." data-i18n-place="npc-repeating-name-place">
                     <textarea name="attr_desc" placeholder="The creature adds 2 to its AC against..." data-i18n-place="npc-repeating-desc-place"></textarea>
-                </div>  
+                </div>
             </fieldset>
         </div>
         <input class="npcspell_flag" type="hidden" name="attr_npcspell_flag">
@@ -938,42 +938,42 @@
         <div class="col col1">
             <div class="attributes-container" style="margin-top: 10px;">
                 <div class="attr-container">
-                    <button type="roll" name="roll_strength" value="@{wtype}&{template:simple} {{rname=STRENGTH}} {{mod=[[[[@{strength_mod}]][STR]]]}} {{r1=[[1d20@{halflingluck}+[[@{strength_mod}]][STR]]]}} @{rtype}@{halflingluck}+[[@{strength_mod}]][STR]]]}} @{charname_output}" data-i18n="strength-u">STRENGTH</button>
+                    <button type="roll" name="roll_strength" value="@{wtype}&{template:npc} {{rname=STRENGTH}} {{mod=[[[[@{strength_mod}]][STR]]]}} {{r1=[[1d20@{halflingluck}+[[@{strength_mod}]][STR]]]}} @{rtype}@{halflingluck}+[[@{strength_mod}]][STR]]]}} @{charname_output}" data-i18n="strength-u">STRENGTH</button>
                     <input class="attr" type="text" name="attr_strength_mod" title="@{strength_mod}" value="(floor((@{strength}-10)/2))" disabled="true">
                     <div class="attr-mod">
                         <input type="text" name="attr_strength" title="@{strength}" value="10">
                     </div>
                 </div>
                 <div class="attr-container">
-                    <button type="roll" name="roll_dexterity" value="@{wtype}&{template:simple} {{rname=DEXTERITY}} {{mod=[[[[@{dexterity_mod}]][DEX]]]}} {{r1=[[1d20@{halflingluck}+[[@{dexterity_mod}]][DEX]]]}} @{rtype}@{halflingluck}+[[@{dexterity_mod}]][DEX]]]}} @{charname_output}" data-i18n="dexterity-u">DEXTERITY</button>
+                    <button type="roll" name="roll_dexterity" value="@{wtype}&{template:npc} {{rname=DEXTERITY}} {{mod=[[[[@{dexterity_mod}]][DEX]]]}} {{r1=[[1d20@{halflingluck}+[[@{dexterity_mod}]][DEX]]]}} @{rtype}@{halflingluck}+[[@{dexterity_mod}]][DEX]]]}} @{charname_output}" data-i18n="dexterity-u">DEXTERITY</button>
                     <input class="attr" type="text" name="attr_dexterity_mod" title="@{dexterity_mod}" value="(floor((@{dexterity}-10)/2))" disabled="true">
                     <div class="attr-mod">
                         <input type="text" name="attr_dexterity" title="@{dexterity}" value="10">
                     </div>
                 </div>
                 <div class="attr-container">
-                    <button type="roll" name="roll_constitution" value="@{wtype}&{template:simple} {{rname=CONSTITUTION}} {{mod=[[[[@{constitution_mod}]][CON]]]}} {{r1=[[1d20@{halflingluck}+[[@{constitution_mod}]][CON]]]}} @{rtype}@{halflingluck}+[[@{constitution_mod}]][CON]]]}} @{charname_output}" data-i18n="constitution-u">CONSTITUTION</button>
+                    <button type="roll" name="roll_constitution" value="@{wtype}&{template:npc} {{rname=CONSTITUTION}} {{mod=[[[[@{constitution_mod}]][CON]]]}} {{r1=[[1d20@{halflingluck}+[[@{constitution_mod}]][CON]]]}} @{rtype}@{halflingluck}+[[@{constitution_mod}]][CON]]]}} @{charname_output}" data-i18n="constitution-u">CONSTITUTION</button>
                     <input class="attr" type="text" name="attr_constitution_mod" title="@{constitution_mod}" value="(floor((@{constitution}-10)/2))" disabled="true">
                     <div class="attr-mod">
                         <input type="text" name="attr_constitution" title="@{constitution}" value="10">
                     </div>
                 </div>
                 <div class="attr-container">
-                    <button type="roll" name="roll_intelligence" value="@{wtype}&{template:simple} {{rname=INTELLIGENCE}} {{mod=[[[[@{intelligence_mod}]][INT]]]}} {{r1=[[1d20@{halflingluck}+[[@{intelligence_mod}]][INT]]]}} @{rtype}@{halflingluck}+[[@{intelligence_mod}]][INT]]]}} @{charname_output}" data-i18n="intelligence-u">INTELLIGENCE</button>
+                    <button type="roll" name="roll_intelligence" value="@{wtype}&{template:npc} {{rname=INTELLIGENCE}} {{mod=[[[[@{intelligence_mod}]][INT]]]}} {{r1=[[1d20@{halflingluck}+[[@{intelligence_mod}]][INT]]]}} @{rtype}@{halflingluck}+[[@{intelligence_mod}]][INT]]]}} @{charname_output}" data-i18n="intelligence-u">INTELLIGENCE</button>
                     <input class="attr" type="text" name="attr_intelligence_mod" title="@{intelligence_mod}" value="(floor((@{intelligence}-10)/2))" disabled="true">
                     <div class="attr-mod">
                         <input type="text" name="attr_intelligence" title="@{intelligence}" value="10">
                     </div>
                 </div>
                 <div class="attr-container">
-                    <button type="roll" name="roll_wisdom" value="@{wtype}&{template:simple} {{rname=WISDOM}} {{mod=[[[[@{wisdom_mod}]][WIS]]]}} {{r1=[[1d20@{halflingluck}+[[@{wisdom_mod}]][WIS]]]}} @{rtype}@{halflingluck}+[[@{wisdom_mod}]][WIS]]]}} @{charname_output}" data-i18n="wisdom-u">WISDOM</button>
+                    <button type="roll" name="roll_wisdom" value="@{wtype}&{template:npc} {{rname=WISDOM}} {{mod=[[[[@{wisdom_mod}]][WIS]]]}} {{r1=[[1d20@{halflingluck}+[[@{wisdom_mod}]][WIS]]]}} @{rtype}@{halflingluck}+[[@{wisdom_mod}]][WIS]]]}} @{charname_output}" data-i18n="wisdom-u">WISDOM</button>
                     <input class="attr" type="text" name="attr_wisdom_mod" title="@{wisdom_mod}" value="(floor((@{wisdom}-10)/2))" disabled="true">
                     <div class="attr-mod">
                         <input type="text" name="attr_wisdom" title="@{wisdom}" value="10">
                     </div>
                 </div>
                 <div class="attr-container">
-                    <button type="roll" name="roll_charisma" value="@{wtype}&{template:simple} {{rname=CHARISMA}} {{mod=[[[[@{charisma_mod}]][CHA]]]}} {{r1=[[1d20@{halflingluck}+[[@{charisma_mod}]][CHA]]]}} @{rtype}@{halflingluck}+[[@{charisma_mod}]][CHA]]]}} @{charname_output}" data-i18n="charisma-u">CHARISMA</button>
+                    <button type="roll" name="roll_charisma" value="@{wtype}&{template:npc} {{rname=CHARISMA}} {{mod=[[[[@{charisma_mod}]][CHA]]]}} {{r1=[[1d20@{halflingluck}+[[@{charisma_mod}]][CHA]]]}} @{rtype}@{halflingluck}+[[@{charisma_mod}]][CHA]]]}} @{charname_output}" data-i18n="charisma-u">CHARISMA</button>
                     <input class="attr" type="text" name="attr_charisma_mod" title="@{charisma_mod}" value="(floor((@{charisma}-10)/2))" disabled="true">
                     <div class="attr-mod">
                         <input type="text" name="attr_charisma" title="@{charisma}" value="10">
@@ -1001,32 +1001,32 @@
                     <div class="saving-throw">
                         <input type="checkbox" name="attr_strength_save_prof" title="@{strength_save_prof}" value="(@{pb})">
                         <input type="text" name="attr_strength_save_bonus" title="@{strength_save_bonus}" value="(@{strength_mod}+@{strength_save_prof})" disabled="true">
-                        <button type="roll" name="roll_strength_save" value="@{wtype}&{template:simple} {{rname=STRENGTH SAVE}} {{mod=[[[[@{strength_save_bonus}]][STR+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{strength_save_bonus}]][STR+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{strength_save_bonus}]][STR+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="strength">Strength</button>
+                        <button type="roll" name="roll_strength_save" value="@{wtype}&{template:npc} {{rname=STRENGTH SAVE}} {{mod=[[[[@{strength_save_bonus}]][STR+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{strength_save_bonus}]][STR+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{strength_save_bonus}]][STR+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="strength">Strength</button>
                     </div>
                     <div class="saving-throw">
                         <input type="checkbox" name="attr_dexterity_save_prof" title="@{dexterity_save_prof}" value="(@{pb})">
                         <input type="text" name="attr_dexterity_save_bonus" title="@{dexterity_save_bonus}" value="(@{dexterity_mod}+@{dexterity_save_prof})" disabled="true">
-                        <button type="roll" name="roll_dexterity_save" value="@{wtype}&{template:simple} {{rname=DEXTERITY SAVE}} {{mod=[[[[@{dexterity_save_bonus}]][DEX+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{dexterity_save_bonus}]][DEX+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{dexterity_save_bonus}]][DEX+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="dexterity">Dexterity</button>
+                        <button type="roll" name="roll_dexterity_save" value="@{wtype}&{template:npc} {{rname=DEXTERITY SAVE}} {{mod=[[[[@{dexterity_save_bonus}]][DEX+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{dexterity_save_bonus}]][DEX+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{dexterity_save_bonus}]][DEX+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="dexterity">Dexterity</button>
                     </div>
                     <div class="saving-throw">
                         <input type="checkbox" name="attr_constitution_save_prof" title="@{constitution_save_prof}" value="(@{pb})">
                         <input type="text" name="attr_constitution_save_bonus" title="@{constitution_save_bonus}" value="(@{constitution_mod}+@{constitution_save_prof})" disabled="true">
-                        <button type="roll" name="roll_constitution_save" value="@{wtype}&{template:simple} {{rname=CONSTITUTION SAVE}} {{mod=[[[[@{constitution_save_bonus}]][CON+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{constitution_save_bonus}]][CON+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{constitution_save_bonus}]][CON+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="constitution">Constitution</button>
+                        <button type="roll" name="roll_constitution_save" value="@{wtype}&{template:npc} {{rname=CONSTITUTION SAVE}} {{mod=[[[[@{constitution_save_bonus}]][CON+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{constitution_save_bonus}]][CON+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{constitution_save_bonus}]][CON+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="constitution">Constitution</button>
                     </div>
                     <div class="saving-throw">
                         <input type="checkbox" name="attr_intelligence_save_prof" title="@{intelligence_save_prof}" value="(@{pb})">
                         <input type="text" name="attr_intelligence_save_bonus" title="@{intelligence_save_bonus}" value="(@{intelligence_mod}+@{intelligence_save_prof})" disabled="true">
-                        <button type="roll" name="roll_intelligence_save" value="@{wtype}&{template:simple} {{rname=INTELLIGENCE SAVE}} {{mod=[[[[@{intelligence_save_bonus}]][INT+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{intelligence_save_bonus}]][INT+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{intelligence_save_bonus}]][INT+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="intelligence">Intelligence</button>
+                        <button type="roll" name="roll_intelligence_save" value="@{wtype}&{template:npc} {{rname=INTELLIGENCE SAVE}} {{mod=[[[[@{intelligence_save_bonus}]][INT+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{intelligence_save_bonus}]][INT+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{intelligence_save_bonus}]][INT+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="intelligence">Intelligence</button>
                     </div>
                     <div class="saving-throw">
                         <input type="checkbox" name="attr_wisdom_save_prof" title="@{wisdom_save_prof}" value="(@{pb})">
                         <input type="text" name="attr_wisdom_save_bonus" title="@{wisdom_save_bonus}" value="(@{wisdom_mod}+@{wisdom_save_prof})" disabled="true">
-                        <button type="roll" name="roll_wisdom_save" value="@{wtype}&{template:simple} {{rname=WISDOM SAVE}} {{mod=[[[[@{wisdom_save_bonus}]][WIS+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{wisdom_save_bonus}]][WIS+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{wisdom_save_bonus}]][WIS+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="wisdom">Wisdom</button>
+                        <button type="roll" name="roll_wisdom_save" value="@{wtype}&{template:npc} {{rname=WISDOM SAVE}} {{mod=[[[[@{wisdom_save_bonus}]][WIS+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{wisdom_save_bonus}]][WIS+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{wisdom_save_bonus}]][WIS+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="wisdom">Wisdom</button>
                     </div>
                     <div class="saving-throw">
                         <input type="checkbox" name="attr_charisma_save_prof" title="@{charisma_save_prof}" value="(@{pb})">
                         <input type="text" name="attr_charisma_save_bonus" title="@{charisma_save_bonus}" value="(@{charisma_mod}+@{charisma_save_prof})" disabled="true">
-                        <button type="roll" name="roll_charisma_save" value="@{wtype}&{template:simple} {{rname=CHARISMA SAVE}} {{mod=[[[[@{charisma_save_bonus}]][CHA+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{charisma_save_bonus}]][CHA+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{charisma_save_bonus}]][CHA+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="charisma">Charisma</button>
+                        <button type="roll" name="roll_charisma_save" value="@{wtype}&{template:npc} {{rname=CHARISMA SAVE}} {{mod=[[[[@{charisma_save_bonus}]][CHA+PROF]@{globalsavingthrowbonus}]]}} {{r1=[[1d20@{halflingluck}+[[@{charisma_save_bonus}]][CHA+PROF]@{globalsavingthrowbonus}]]}} @{rtype}@{halflingluck}+[[@{charisma_save_bonus}]][CHA+PROF]@{globalsavingthrowbonus}]]}} @{charname_output}" data-i18n="charisma">Charisma</button>
                     </div>
                     <div class="label">
                         <span data-i18n="saving-throws-u">SAVING THROWS</span>
@@ -1036,92 +1036,92 @@
                     <div class="skill">
                         <input type="checkbox" name="attr_acrobatics_prof" title="@{acrobatics_prof}" value="(@{pb}*@{acrobatics_type})">
                         <input type="text" name="attr_acrobatics_bonus" title="@{acrobatics_bonus}" value="(@{dexterity_mod}+@{acrobatics_proficiency}+@{acrobatics_flat})" disabled="true">
-                        <button type="roll" name="roll_acrobatics" value="@{wtype}&{template:simple} {{rname=ACROBATICS}} {{mod=[[[[@{acrobatics_bonus}]][ACR]]]}} {{r1=[[1d20@{halflingluck}+[[@{acrobatics_bonus}]][ACR]]]}} @{rtype}@{halflingluck}+[[@{acrobatics_bonus}]][ACR]]]}} @{charname_output}" data-i18n="acrobatics-core">Acrobatics <span>(Dex)</span></button>
+                        <button type="roll" name="roll_acrobatics" value="@{wtype}&{template:npc} {{rname=ACROBATICS}} {{mod=[[[[@{acrobatics_bonus}]][ACR]]]}} {{r1=[[1d20@{halflingluck}+[[@{acrobatics_bonus}]][ACR]]]}} @{rtype}@{halflingluck}+[[@{acrobatics_bonus}]][ACR]]]}} @{charname_output}" data-i18n="acrobatics-core">Acrobatics <span>(Dex)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_animal_handling_prof" title="@{animal_handling_prof}" value="(@{pb}*@{animal_handling_type})">
                         <input type="text" name="attr_animal_handling_bonus" title="@{animal_handling_bonus}" value="(@{wisdom_mod}+@{animal_handling_proficiency}+@{animal_handling_flat})" disabled="true">
-                        <button type="roll" name="roll_animal_handling" value="@{wtype}&{template:simple} {{rname=ANIMAL HANDLING}} {{mod=[[[[@{animal_handling_bonus}]][ANI]]]}} {{r1=[[1d20@{halflingluck}+[[@{animal_handling_bonus}]][ANI]]]}} @{rtype}@{halflingluck}+[[@{animal_handling_bonus}]][ANI]]]}} @{charname_output}" data-i18n="animal-handling-core">Animal Handling <span>(Wis)</span></button>
+                        <button type="roll" name="roll_animal_handling" value="@{wtype}&{template:npc} {{rname=ANIMAL HANDLING}} {{mod=[[[[@{animal_handling_bonus}]][ANI]]]}} {{r1=[[1d20@{halflingluck}+[[@{animal_handling_bonus}]][ANI]]]}} @{rtype}@{halflingluck}+[[@{animal_handling_bonus}]][ANI]]]}} @{charname_output}" data-i18n="animal-handling-core">Animal Handling <span>(Wis)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_arcana_prof" title="@{arcana_prof}" value="(@{pb}*@{arcana_type})">
                         <input type="text" name="attr_arcana_bonus" title="@{arcana_bonus}" value="(@{intelligence_mod}+@{arcana_proficiency}+@{arcana_flat})" disabled="true">
-                        <button type="roll" name="roll_arcana" value="@{wtype}&{template:simple} {{rname=ARCANA}} {{mod=[[[[@{arcana_bonus}]][ARC]]]}} {{r1=[[1d20@{halflingluck}+[[@{arcana_bonus}]][ARC]]]}} @{rtype}@{halflingluck}+[[@{arcana_bonus}]][ARC]]]}} @{charname_output}" data-i18n="arcana-core">Arcana <span>(Int)</span></button>
+                        <button type="roll" name="roll_arcana" value="@{wtype}&{template:npc} {{rname=ARCANA}} {{mod=[[[[@{arcana_bonus}]][ARC]]]}} {{r1=[[1d20@{halflingluck}+[[@{arcana_bonus}]][ARC]]]}} @{rtype}@{halflingluck}+[[@{arcana_bonus}]][ARC]]]}} @{charname_output}" data-i18n="arcana-core">Arcana <span>(Int)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_athletics_prof" title="@{athletics_prof}" value="(@{pb}*@{athletics_type})">
                         <input type="text" name="attr_athletics_bonus" title="@{athletics_bonus}" value="(@{strength_mod}+@{athletics_proficiency}+@{athletics_flat})" disabled="true">
-                        <button type="roll" name="roll_athletics" value="@{wtype}&{template:simple} {{rname=ATHLETICS}} {{mod=[[[[@{athletics_bonus}]][ATH]]]}} {{r1=[[1d20@{halflingluck}+[[@{athletics_bonus}]][ATH]]]}} @{rtype}@{halflingluck}+[[@{athletics_bonus}]][ATH]]]}} @{charname_output}" data-i18n="athletics-core">Athletics <span>(Str)</span></button>
+                        <button type="roll" name="roll_athletics" value="@{wtype}&{template:npc} {{rname=ATHLETICS}} {{mod=[[[[@{athletics_bonus}]][ATH]]]}} {{r1=[[1d20@{halflingluck}+[[@{athletics_bonus}]][ATH]]]}} @{rtype}@{halflingluck}+[[@{athletics_bonus}]][ATH]]]}} @{charname_output}" data-i18n="athletics-core">Athletics <span>(Str)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_deception_prof" title="@{deception_prof}" value="(@{pb}*@{deception_type})">
                         <input type="text" name="attr_deception_bonus" title="@{deception_bonus}" value="(@{charisma_mod}+@{deception_proficiency}+@{deception_flat})" disabled="true">
-                        <button type="roll" name="roll_deception" value="@{wtype}&{template:simple} {{rname=DECEPTION}} {{mod=[[[[@{deception_bonus}]][DEC]]]}} {{r1=[[1d20@{halflingluck}+[[@{deception_bonus}]][DEC]]]}} @{rtype}@{halflingluck}+[[@{deception_bonus}]][DEC]]]}} @{charname_output}" data-i18n="deception-core">Deception <span>(Cha)</span></button>
+                        <button type="roll" name="roll_deception" value="@{wtype}&{template:npc} {{rname=DECEPTION}} {{mod=[[[[@{deception_bonus}]][DEC]]]}} {{r1=[[1d20@{halflingluck}+[[@{deception_bonus}]][DEC]]]}} @{rtype}@{halflingluck}+[[@{deception_bonus}]][DEC]]]}} @{charname_output}" data-i18n="deception-core">Deception <span>(Cha)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_history_prof" title="@{history_prof}" value="(@{pb}*@{history_type})">
                         <input type="text" name="attr_history_bonus" title="@{history_bonus}" value="(@{intelligence_mod}+@{history_proficiency}+@{history_flat})" disabled="true">
-                        <button type="roll" name="roll_history" value="@{wtype}&{template:simple} {{rname=HISTORY}} {{mod=[[[[@{history_bonus}]][HIS]]]}} {{r1=[[1d20@{halflingluck}+[[@{history_bonus}]][HIS]]]}} @{rtype}@{halflingluck}+[[@{history_bonus}]][HIS]]]}} @{charname_output}" data-i18n="history-core">History <span>(Int)</span></button>
+                        <button type="roll" name="roll_history" value="@{wtype}&{template:npc} {{rname=HISTORY}} {{mod=[[[[@{history_bonus}]][HIS]]]}} {{r1=[[1d20@{halflingluck}+[[@{history_bonus}]][HIS]]]}} @{rtype}@{halflingluck}+[[@{history_bonus}]][HIS]]]}} @{charname_output}" data-i18n="history-core">History <span>(Int)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_insight_prof" title="@{insight_prof}" value="(@{pb}*@{insight_type})">
                         <input type="text" name="attr_insight_bonus" title="@{insight_bonus}" value="(@{wisdom_mod}+@{insight_proficiency}+@{insight_flat})" disabled="true">
-                        <button type="roll" name="roll_insight" value="@{wtype}&{template:simple} {{rname=INSIGHT}} {{mod=[[[[@{insight_bonus}]][INS]]]}} {{r1=[[1d20@{halflingluck}+[[@{insight_bonus}]][INS]]]}} @{rtype}@{halflingluck}+[[@{insight_bonus}]][INS]]]}} @{charname_output}" data-i18n="insight-core">Insight <span>(Wis)</span></button>
+                        <button type="roll" name="roll_insight" value="@{wtype}&{template:npc} {{rname=INSIGHT}} {{mod=[[[[@{insight_bonus}]][INS]]]}} {{r1=[[1d20@{halflingluck}+[[@{insight_bonus}]][INS]]]}} @{rtype}@{halflingluck}+[[@{insight_bonus}]][INS]]]}} @{charname_output}" data-i18n="insight-core">Insight <span>(Wis)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_intimidation_prof" title="@{intimidation_prof}" value="(@{pb}*@{intimidation_type})">
                         <input type="text" name="attr_intimidation_bonus" title="@{intimidation_bonus}" value="(@{charisma_mod}+@{intimidation_proficiency}+@{intimidation_flat})" disabled="true">
-                        <button type="roll" name="roll_intimidation" value="@{wtype}&{template:simple} {{rname=INTIMIDATION}} {{mod=[[[[@{intimidation_bonus}]][INT]]]}} {{r1=[[1d20@{halflingluck}+[[@{intimidation_bonus}]][INT]]]}} @{rtype}@{halflingluck}+[[@{intimidation_bonus}]][INT]]]}} @{charname_output}" data-i18n="intimidation-core">Intimidation <span>(Cha)</span></button>
+                        <button type="roll" name="roll_intimidation" value="@{wtype}&{template:npc} {{rname=INTIMIDATION}} {{mod=[[[[@{intimidation_bonus}]][INT]]]}} {{r1=[[1d20@{halflingluck}+[[@{intimidation_bonus}]][INT]]]}} @{rtype}@{halflingluck}+[[@{intimidation_bonus}]][INT]]]}} @{charname_output}" data-i18n="intimidation-core">Intimidation <span>(Cha)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_investigation_prof" title="@{investigation_prof}" value="(@{pb}*@{investigation_type})">
                         <input type="text" name="attr_investigation_bonus" title="@{investigation_bonus}" value="(@{intelligence_mod}+@{investigation_proficiency}+@{investigation_flat})" disabled="true">
-                        <button type="roll" name="roll_investigation" value="@{wtype}&{template:simple} {{rname=INVESTIGATION}} {{mod=[[[[@{investigation_bonus}]][INV]]]}} {{r1=[[1d20@{halflingluck}+[[@{investigation_bonus}]][INV]]]}} @{rtype}@{halflingluck}+[[@{investigation_bonus}]][INV]]]}} @{charname_output}" data-i18n="investigation-core">Investigation <span>(Int)</span></button>
+                        <button type="roll" name="roll_investigation" value="@{wtype}&{template:npc} {{rname=INVESTIGATION}} {{mod=[[[[@{investigation_bonus}]][INV]]]}} {{r1=[[1d20@{halflingluck}+[[@{investigation_bonus}]][INV]]]}} @{rtype}@{halflingluck}+[[@{investigation_bonus}]][INV]]]}} @{charname_output}" data-i18n="investigation-core">Investigation <span>(Int)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_medicine_prof" title="@{medicine_prof}" value="(@{pb}*@{medicine_type})">
                         <input type="text" name="attr_medicine_bonus" title="@{medicine_bonus}" value="(@{wisdom_mod}+@{medicine_proficiency}+@{medicine_flat})" disabled="true">
-                        <button type="roll" name="roll_medicine" value="@{wtype}&{template:simple} {{rname=MEDICINE}} {{mod=[[[[@{medicine_bonus}]][MED]]]}} {{r1=[[1d20@{halflingluck}+[[@{medicine_bonus}]][MED]]]}} @{rtype}@{halflingluck}+[[@{medicine_bonus}]][MED]]]}} @{charname_output}" data-i18n="medicine-core">Medicine <span>(Wis)</span></button>
+                        <button type="roll" name="roll_medicine" value="@{wtype}&{template:npc} {{rname=MEDICINE}} {{mod=[[[[@{medicine_bonus}]][MED]]]}} {{r1=[[1d20@{halflingluck}+[[@{medicine_bonus}]][MED]]]}} @{rtype}@{halflingluck}+[[@{medicine_bonus}]][MED]]]}} @{charname_output}" data-i18n="medicine-core">Medicine <span>(Wis)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_nature_prof" title="@{nature_prof}" value="(@{pb}*@{nature_type})">
                         <input type="text" name="attr_nature_bonus" title="@{nature_bonus}" value="(@{intelligence_mod}+@{nature_proficiency}+@{nature_flat})" disabled="true">
-                        <button type="roll" name="roll_nature" value="@{wtype}&{template:simple} {{rname=NATURE}} {{mod=[[[[@{nature_bonus}]][NAT]]]}} {{r1=[[1d20@{halflingluck}+[[@{nature_bonus}]][NAT]]]}} @{rtype}@{halflingluck}+[[@{nature_bonus}]][NAT]]]}} @{charname_output}" data-i18n="nature-core">Nature <span>(Int)</span></button>
+                        <button type="roll" name="roll_nature" value="@{wtype}&{template:npc} {{rname=NATURE}} {{mod=[[[[@{nature_bonus}]][NAT]]]}} {{r1=[[1d20@{halflingluck}+[[@{nature_bonus}]][NAT]]]}} @{rtype}@{halflingluck}+[[@{nature_bonus}]][NAT]]]}} @{charname_output}" data-i18n="nature-core">Nature <span>(Int)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_perception_prof" title="@{perception_prof}" value="(@{pb}*@{perception_type})">
                         <input type="text" name="attr_perception_bonus" title="@{perception_bonus}" value="(@{wisdom_mod}+@{perception_proficiency}+@{perception_flat})" disabled="true">
-                        <button type="roll" name="roll_perception" value="@{wtype}&{template:simple} {{rname=PERCEPTION}} {{mod=[[[[@{perception_bonus}]][PER]]]}} {{r1=[[1d20@{halflingluck}+[[@{perception_bonus}]][PER]]]}} @{rtype}@{halflingluck}+[[@{perception_bonus}]][PER]]]}} @{charname_output}" data-i18n="perception-core">Perception <span>(Wis)</span></button>
+                        <button type="roll" name="roll_perception" value="@{wtype}&{template:npc} {{rname=PERCEPTION}} {{mod=[[[[@{perception_bonus}]][PER]]]}} {{r1=[[1d20@{halflingluck}+[[@{perception_bonus}]][PER]]]}} @{rtype}@{halflingluck}+[[@{perception_bonus}]][PER]]]}} @{charname_output}" data-i18n="perception-core">Perception <span>(Wis)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_performance_prof" title="@{performance_prof}" value="(@{pb}*@{performance_type})">
                         <input type="text" name="attr_performance_bonus" title="@{performance_bonus}" value="(@{charisma_mod}+@{performance_proficiency}+@{performance_flat})" disabled="true">
-                        <button type="roll" name="roll_performance" value="@{wtype}&{template:simple} {{rname=PERFORMANCE}} {{mod=[[[[@{performance_bonus}]][PER]]]}} {{r1=[[1d20@{halflingluck}+[[@{performance_bonus}]][PER]]]}} @{rtype}@{halflingluck}+[[@{performance_bonus}]][PER]]]}} @{charname_output}" data-i18n="performance-core">Performance <span>(Cha)</span></button>
+                        <button type="roll" name="roll_performance" value="@{wtype}&{template:npc} {{rname=PERFORMANCE}} {{mod=[[[[@{performance_bonus}]][PER]]]}} {{r1=[[1d20@{halflingluck}+[[@{performance_bonus}]][PER]]]}} @{rtype}@{halflingluck}+[[@{performance_bonus}]][PER]]]}} @{charname_output}" data-i18n="performance-core">Performance <span>(Cha)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_persuasion_prof" title="@{persuasion_prof}" value="(@{pb}*@{persuasion_type})">
                         <input type="text" name="attr_persuasion_bonus" title="@{persuasion_bonus}" value="(@{charisma_mod}+@{persuasion_proficiency}+@{persuasion_flat})" disabled="true">
-                        <button type="roll" name="roll_persuasion" value="@{wtype}&{template:simple} {{rname=PERSUASION}} {{mod=[[[[@{persuasion_bonus}]][PER]]]}} {{r1=[[1d20@{halflingluck}+[[@{persuasion_bonus}]][PER]]]}} @{rtype}@{halflingluck}+[[@{persuasion_bonus}]][PER]]]}} @{charname_output}" data-i18n="persuasion-core">Persuasion <span>(Cha)</span></button>
+                        <button type="roll" name="roll_persuasion" value="@{wtype}&{template:npc} {{rname=PERSUASION}} {{mod=[[[[@{persuasion_bonus}]][PER]]]}} {{r1=[[1d20@{halflingluck}+[[@{persuasion_bonus}]][PER]]]}} @{rtype}@{halflingluck}+[[@{persuasion_bonus}]][PER]]]}} @{charname_output}" data-i18n="persuasion-core">Persuasion <span>(Cha)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_religion_prof" title="@{religion_prof}" value="(@{pb}*@{religion_type})">
                         <input type="text" name="attr_religion_bonus" title="@{religion_bonus}" value="(@{intelligence_mod}+@{religion_proficiency}+@{religion_flat})" disabled="true">
-                        <button type="roll" name="roll_religion" value="@{wtype}&{template:simple} {{rname=RELIGION}} {{mod=[[[[@{religion_bonus}]][REL]]]}} {{r1=[[1d20@{halflingluck}+[[@{religion_bonus}]][REL]]]}} @{rtype}@{halflingluck}+[[@{religion_bonus}]][REL]]]}} @{charname_output}" data-i18n="religion-core">Religion <span>(Int)</span></button>
+                        <button type="roll" name="roll_religion" value="@{wtype}&{template:npc} {{rname=RELIGION}} {{mod=[[[[@{religion_bonus}]][REL]]]}} {{r1=[[1d20@{halflingluck}+[[@{religion_bonus}]][REL]]]}} @{rtype}@{halflingluck}+[[@{religion_bonus}]][REL]]]}} @{charname_output}" data-i18n="religion-core">Religion <span>(Int)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_sleight_of_hand_prof" title="@{sleight_of_hand_prof}" value="(@{pb}*@{sleight_of_hand_type})">
                         <input type="text" name="attr_sleight_of_hand_bonus" title="@{sleight_of_hand_bonus}" value="(@{dexterity_mod}+@{sleight_of_hand_proficiency}+@{sleight_of_hand_flat})" disabled="true">
-                        <button type="roll" name="roll_sleight_of_hand" value="@{wtype}&{template:simple} {{rname=SLEIGHT OF HAND}} {{mod=[[[[@{sleight_of_hand_bonus}]][SLE]]]}} {{r1=[[1d20@{halflingluck}+[[@{sleight_of_hand_bonus}]][SLE]]]}} @{rtype}@{halflingluck}+[[@{sleight_of_hand_bonus}]][SLE]]]}} @{charname_output}" data-i18n="sleight-of-hand-core">Sleight of Hand <span>(Dex)</span></button>
+                        <button type="roll" name="roll_sleight_of_hand" value="@{wtype}&{template:npc} {{rname=SLEIGHT OF HAND}} {{mod=[[[[@{sleight_of_hand_bonus}]][SLE]]]}} {{r1=[[1d20@{halflingluck}+[[@{sleight_of_hand_bonus}]][SLE]]]}} @{rtype}@{halflingluck}+[[@{sleight_of_hand_bonus}]][SLE]]]}} @{charname_output}" data-i18n="sleight-of-hand-core">Sleight of Hand <span>(Dex)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_stealth_prof" title="@{stealth_prof}" value="(@{pb}*@{stealth_type})">
                         <input type="text" name="attr_stealth_bonus" title="@{stealth_bonus}" value="(@{dexterity_mod}+@{stealth_proficiency}+@{stealth_flat})" disabled="true">
-                        <button type="roll" name="roll_stealth" value="@{wtype}&{template:simple} {{rname=STEALTH}} {{mod=[[[[@{stealth_bonus}]][STE]]]}} {{r1=[[1d20@{halflingluck}+[[@{stealth_bonus}]][STE]]]}} @{rtype}@{halflingluck}+[[@{stealth_bonus}]][STE]]]}} @{charname_output}" data-i18n="stealth-core">Stealth <span>(Dex)</span></button>
+                        <button type="roll" name="roll_stealth" value="@{wtype}&{template:npc} {{rname=STEALTH}} {{mod=[[[[@{stealth_bonus}]][STE]]]}} {{r1=[[1d20@{halflingluck}+[[@{stealth_bonus}]][STE]]]}} @{rtype}@{halflingluck}+[[@{stealth_bonus}]][STE]]]}} @{charname_output}" data-i18n="stealth-core">Stealth <span>(Dex)</span></button>
                     </div>
                     <div class="skill">
                         <input type="checkbox" name="attr_survival_prof" title="@{survival_prof}" value="(@{pb}*@{survival_type})">
                         <input type="text" name="attr_survival_bonus" title="@{survival_bonus}" value="(@{wisdom_mod}+@{survival_proficiency}+@{survival_flat})" disabled="true">
-                        <button type="roll" name="roll_survival" value="@{wtype}&{template:simple} {{rname=SURVIVAL}} {{mod=[[[[@{survival_bonus}]][SUR]]]}} {{r1=[[1d20@{halflingluck}+[[@{survival_bonus}]][SUR]]]}} @{rtype}@{halflingluck}+[[@{survival_bonus}]][SUR]]]}} @{charname_output}" data-i18n="survival-core">Survival <span>(Wis)</span></button>
+                        <button type="roll" name="roll_survival" value="@{wtype}&{template:npc} {{rname=SURVIVAL}} {{mod=[[[[@{survival_bonus}]][SUR]]]}} {{r1=[[1d20@{halflingluck}+[[@{survival_bonus}]][SUR]]]}} @{rtype}@{halflingluck}+[[@{survival_bonus}]][SUR]]]}} @{charname_output}" data-i18n="survival-core">Survival <span>(Wis)</span></button>
                     </div>
                     <div class="label">
                         <span data-i18n="skills-u">SKILLS</span>
@@ -1171,7 +1171,7 @@
                             </div>
                         </div>
                         <div class="display">
-                            <button type="roll" name="roll_tool" value="@{wtype}&{template:simple} {{rname=@{toolname}}} {{mod=[[[[@{toolbonus}]][TOOL]]]}} {{r1=[[1d20@{halflingluck}+[[@{toolbonus}]][TOOL]]]}} @{rtype}@{halflingluck}+[[@{toolbonus}]][TOOL]]]}} @{charname_output}">
+                            <button type="roll" name="roll_tool" value="@{wtype}&{template:npc} {{rname=@{toolname}}} {{mod=[[[[@{toolbonus}]][TOOL]]]}} {{r1=[[1d20@{halflingluck}+[[@{toolbonus}]][TOOL]]]}} @{rtype}@{halflingluck}+[[@{toolbonus}]][TOOL]]]}} @{charname_output}">
                                 <input type="text" name="attr_toolname" style="width: 95px;">
                                 <input type="text" name="attr_toolbonus" style="width: 30px; text-align: center;">
                                 <input type="text" name="attr_toolattr" style="width: 100px;">
@@ -1198,7 +1198,7 @@
                 </div>
                 <div class="init">
                     <input type="text" name="attr_initiative_bonus" title="@{initiative_bonus}" value="(@{dexterity_mod}+@{initmod}+@{jack_of_all_trades})" disabled="true">
-                    <button type="roll" name="roll_initiative" value="@{wtype}&{template:simple} {{rname=INITIATIVE}} {{mod=[[@{initiative_bonus}[INIT]]]}} {{r1=[[1d20@{halflingluck}+[[@{initiative_bonus}]][INIT] &{tracker}]]}} {{normal=1}} @{charname_output}" data-i18n="init-u">INITIATIVE</button>
+                    <button type="roll" name="roll_initiative" value="@{wtype}&{template:npc} {{rname=INITIATIVE}} {{mod=[[@{initiative_bonus}[INIT]]]}} {{r1=[[1d20@{halflingluck}+[[@{initiative_bonus}]][INIT] &{tracker}]]}} {{normal=1}} @{charname_output}" data-i18n="init-u">INITIATIVE</button>
                 </div>
                 <div class="speed">
                     <input type="text" name="attr_speed" title="@{speed}">
@@ -1224,7 +1224,7 @@
                         <input type="text" name="attr_hit_dice_max" title="@{hit_dice_max}">
                     </div>
                     <input type="number" name="attr_hit_dice" title="@{hit_dice}" style="margin-bottom: -6px;">
-                    <button type="roll" name="roll_hit_dice" value="@{wtype}&{template:simple} {{rname=HIT DIE}} {{mod=D@{hitdie_final}+[[@{constitution_mod}[CON]]]}} {{r1=[[1d@{hitdie_final}+[[@{constitution_mod}]][CON]]]}} {{normal=1}} @{charname_output}" data-i18n="hit-dice-u">HIT DICE</button>
+                    <button type="roll" name="roll_hit_dice" value="@{wtype}&{template:npc} {{rname=HIT DIE}} {{mod=D@{hitdie_final}+[[@{constitution_mod}[CON]]]}} {{r1=[[1d@{hitdie_final}+[[@{constitution_mod}]][CON]]]}} {{normal=1}} @{charname_output}" data-i18n="hit-dice-u">HIT DICE</button>
                 </div>
                 <div class="subcontainer" style="height: 64px; width: 117px; float: right;">
                     <div class="row-container">
@@ -1239,7 +1239,7 @@
                         <input type="checkbox" name="attr_deathsave_fail2">
                         <input type="checkbox" name="attr_deathsave_fail3">
                     </div>
-                    <button type="roll" name="roll_death_save" style="margin-top: 6px;" value="@{wtype}&{template:simple} {{rname=DEATH SAVE}} {{mod=@{deathsavemod}}} {{r1=[[1d20@{halflingluck}+@{deathsavemod}[MOD]]]}} {{normal=1}} @{charname_output}" data-i18n="death-saves-u">DEATH SAVES</button>
+                    <button type="roll" name="roll_death_save" style="margin-top: 6px;" value="@{wtype}&{template:npc} {{rname=DEATH SAVE}} {{mod=@{deathsavemod}}} {{r1=[[1d20@{halflingluck}+@{deathsavemod}[MOD]]]}} {{normal=1}} @{charname_output}" data-i18n="death-saves-u">DEATH SAVES</button>
                 </div>
             </div>
             <input type="hidden" class="ammoflag" name="attr_ammoflag">
@@ -1390,8 +1390,8 @@
                     <input type="hidden" name="attr_hldmg">
                     <input type="hidden" name="attr_spelllevel">
                     <input type="hidden" name="attr_rollbase">
-                    <button type="roll" name="roll_attack_dmg" style="display: none;" value="@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{spelllevel} @{charname_output}"></button>
-                    <button type="roll" name="roll_attack_crit" style="display: none;" value="@{wtype}&{template:dmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} {{crit1=[[@{hidden_crit1}]]}} {{crit2=[[@{hidden_crit2}]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{spelllevel} @{charname_output}"></button>
+                    <button type="roll" name="roll_attack_dmg" style="display: none;" value="@{wtype}&{template:npcdmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{spelllevel} @{charname_output}"></button>
+                    <button type="roll" name="roll_attack_crit" style="display: none;" value="@{wtype}&{template:npcdmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} {{crit1=[[@{hidden_crit1}]]}} {{crit2=[[@{hidden_crit2}]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{spelllevel} @{charname_output}"></button>
                     <input type="hidden" name="attr_itemid">
                     <input type="hidden" name="attr_spellid">
                 </fieldset>
@@ -1540,10 +1540,10 @@
                 <span class="label" data-i18n="feats-traits-u">FEATURES & TRAITS</span>
             </div>
         </div>
-        
+
     </div>
 </div>
-    
+
 <div class="page bio">
     <div class="header">
         <div class="name-container">
@@ -1806,7 +1806,7 @@
                     </div>
                 </fieldset>
             </div>
-            
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">1</span>
@@ -1971,7 +1971,7 @@
                     </div>
                 </fieldset>
             </div>
-            
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">2</span>
@@ -2136,10 +2136,10 @@
                     </div>
                 </fieldset>
             </div>
-            
+
         </div>
         <div class="col col2">
-        
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">3</span>
@@ -2304,7 +2304,7 @@
                     </div>
                 </fieldset>
             </div>
-            
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">4</span>
@@ -2469,7 +2469,7 @@
                     </div>
                 </fieldset>
             </div>
-            
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">5</span>
@@ -2634,10 +2634,10 @@
                     </div>
                 </fieldset>
             </div>
-            
+
         </div>
         <div class="col col3">
-        
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">6</span>
@@ -2802,7 +2802,7 @@
                     </div>
                 </fieldset>
             </div>
-            
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">7</span>
@@ -2967,7 +2967,7 @@
                     </div>
                 </fieldset>
             </div>
-            
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">8</span>
@@ -3132,7 +3132,7 @@
                     </div>
                 </fieldset>
             </div>
-            
+
             <div class="spell-level">
                 <div class="level">
                     <span class="label">9</span>
@@ -3297,7 +3297,7 @@
                     </div>
                 </fieldset>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -3566,7 +3566,7 @@
                     <span data-i18n="cust-class-opts">CUSTOM CLASS OPTIONS</span>
                 </div>
             </div>
-            
+
         </div>
         <div class="col col2">
             <div class="skill_options" style="width: 234px;">
@@ -3801,7 +3801,7 @@
 
 <!-- ROLL TEMPLATES -->
 <div class="rolltemplates">
-    
+
     <rolltemplate class="sheet-rolltemplate-simple">
         <div class="container">
             <div class="result">
@@ -4006,7 +4006,7 @@
             </div>
         {{/desc}}
     </rolltemplate>
-    
+
     <rolltemplate class="sheet-rolltemplate-dmg">
         {{#save}}
             {{#attack}}
@@ -4095,7 +4095,7 @@
             {{/attack}}
         </div>
     </rolltemplate>
-    
+
     <rolltemplate class="sheet-rolltemplate-atkdmg">
         {{#attack}}
             <div class="container atk">
@@ -4355,7 +4355,7 @@
             </div>
         {{/damage}}
     </rolltemplate>
-    
+
     <rolltemplate class="sheet-rolltemplate-spell">
         <div class="container">
             <div class="title row">
@@ -4406,7 +4406,7 @@
             {{/athigherlevels}}
         </div>
     </rolltemplate>
-    
+
     <rolltemplate class="sheet-rolltemplate-npc">
         <div class="row header">
             <span>{{rname}}</span>
@@ -4446,8 +4446,12 @@
             {{/disadvantage}}
         </div>
     </rolltemplate>
-    
+
     <rolltemplate class="sheet-rolltemplate-npcatk">
+        {{#thistle}}
+        <div class="thistle"></div>
+        <div class="thistle-container">
+        {{/thistle}}
         <div class="row header">
             {{#normal}}
                 {{#rollWasCrit() r1}}{{rnamec}}{{/rollWasCrit() r1}}
@@ -4533,9 +4537,17 @@
                 <span class="desc">{{description}}</span>
             </div>
         {{/description}}
+        {{#desc}}
+            <div class="row">
+                <span class="desc">{{desc}}</span>
+            </div>
+        {{/desc}}
+        {{#thistle}}
+        </div>
+        {{/thistle}}
     </rolltemplate>
-    
-    <rolltemplate class="sheet-rolltemplate-npcdmg">    
+
+    <rolltemplate class="sheet-rolltemplate-npcdmg">
         <div class="container dmgcontainer damagetemplate">
             <span class="italics">Damage: </span>
             <span>
@@ -4548,8 +4560,8 @@
                 {{/dmg2flag}}
             </span>
         </div>
-    </rolltemplate> 
-    
+    </rolltemplate>
+
     <rolltemplate class="sheet-rolltemplate-npcaction">
         <div class="container">
             <div class="row header">
@@ -4600,7 +4612,7 @@
                     <span class="italics">Damage: </span>
                     <span>
                         {{#dmg1flag}}
-                            {{dmg1}} 
+                            {{dmg1}}
                             {{#normal}}
                                 {{#rollWasCrit() r1}} + {{crit1}}{{/rollWasCrit() r1}}
                             {{/normal}}
@@ -4621,7 +4633,7 @@
                         {{/dmg1flag}}
                         {{#dmg1flag}}{{#dmg2flag}}+{{/dmg2flag}}{{/dmg1flag}}
                         {{#dmg2flag}}
-                            {{dmg2}} 
+                            {{dmg2}}
                             {{#normal}}
                                 {{#rollWasCrit() r1}} + {{crit2}}{{/rollWasCrit() r1}}
                             {{/normal}}
@@ -4690,7 +4702,7 @@
     on("change:class change:cust_classname change:cust_hitdietype change:cust_spellcasting_ability change:cust_spellslots change:cust_strength_save_prof change:cust_dexterity_save_prof change:cust_constitution_save_prof change:cust_intelligence_save_prof change:cust_wisdom_save_prof change:cust_charisma_save_prof", function() {
         updateClass();
     });
-    
+
     on("change:custom_class", function() {
         getAttrs(["custom_class"], function(v) {
             if(v.custom_class && v.custom_class === "1") {
@@ -4706,11 +4718,11 @@
         });
         updateClass();
     });
-        
+
     on("change:base_level change:multiclass1 change:multiclass1_lvl change:multiclass2 change:multiclass2_lvl change:multiclass3 change:multiclass3_lvl change:arcane_fighter change:arcane_rogue", function() {
         setlevel();
     });
-    
+
     on("change:multiclass1_flag", function() {
         setlevel();
         getAttrs(["multiclass1_flag"], function(v) {
@@ -4726,7 +4738,7 @@
             };
         });
     });
-    
+
     on("change:multiclass2_flag", function() {
         setlevel();
         getAttrs(["multiclass2_flag"], function(v) {
@@ -4742,7 +4754,7 @@
             };
         });
     });
-    
+
     on("change:multiclass3_flag", function() {
         setlevel();
         getAttrs(["multiclass3_flag"], function(v) {
@@ -4758,15 +4770,15 @@
             };
         });
     });
-    
+
     on("change:repeating_tool:toolname_base change:repeating_tool:toolbonus_base change:repeating_tool:toolattr_base", function() {
         updateTool();
     });
-    
+
     on("change:repeating_attack:atkflag change:repeating_attack:atkname_base change:repeating_attack:atkattr_base change:repeating_attack:atkmod change:repeating_attack:atkmagic change:repeating_attack:atkprofflag change:repeating_attack:dmgflag change:repeating_attack:dmgbase change:repeating_attack:dmgattr change:repeating_attack:dmgmod change:repeating_attack:dmgtype change:repeating_attack:dmg2flag change:repeating_attack:dmg2base change:repeating_attack:dmg2attr change:repeating_attack:dmg2mod change:repeating_attack:dmg2type change:repeating_attack:saveflag change:repeating_attack:savedc change:repeating_attack:saveflat change:repeating_attack:updateflag change:repeating_attack:dmgcustcrit change:repeating_attack:dmg2custcrit change:repeating_attack:ammo", function(eventinfo) {
         updateAttack(eventinfo);
     });
-    
+
     on("change:dtype", function() {
         force_refresh_attacks();
         force_refresh_npcactions();
@@ -4799,11 +4811,11 @@
         //     });
         // });
     });
-    
+
     on("change:repeating_spell-cantrip:spellname_base change:repeating_spell-1:spellname_base change:repeating_spell-1:spellprepared change:repeating_spell-2:spellname_base change:repeating_spell-2:spellprepared change:repeating_spell-3:spellname_base change:repeating_spell-3:spellprepared change:repeating_spell-4:spellname_base change:repeating_spell-4:spellprepared change:repeating_spell-5:spellname_base change:repeating_spell-5:spellprepared change:repeating_spell-6:spellname_base change:repeating_spell-6:spellprepared change:repeating_spell-7:spellname_base change:repeating_spell-7:spellprepared change:repeating_spell-8:spellname_base change:repeating_spell-8:spellprepared change:repeating_spell-9:spellname_base change:repeating_spell-9:spellprepared change:repeating_spell-cantrip:spellrange change:repeating_spell-1:spellrange change:repeating_spell-2:spellrange change:repeating_spell-3:spellrange change:repeating_spell-4:spellrange change:repeating_spell-5:spellrange change:repeating_spell-6:spellrange change:repeating_spell-7:spellrange change:repeating_spell-8:spellrange change:repeating_spell-9:spellrange change:repeating_spell-cantrip:spelltarget change:repeating_spell-1:spelltarget change:repeating_spell-2:spelltarget change:repeating_spell-3:spelltarget change:repeating_spell-4:spelltarget change:repeating_spell-5:spelltarget change:repeating_spell-6:spelltarget change:repeating_spell-7:spelltarget change:repeating_spell-8:spelltarget change:repeating_spell-9:spelltarget change:repeating_spell-cantrip:spelldamage change:repeating_spell-1:spelldamage change:repeating_spell-2:spelldamage change:repeating_spell-3:spelldamage change:repeating_spell-4:spelldamage change:repeating_spell-5:spelldamage change:repeating_spell-6:spelldamage change:repeating_spell-7:spelldamage change:repeating_spell-8:spelldamage change:repeating_spell-9:spelldamage change:repeating_spell-cantrip:spelldamagetype change:repeating_spell-1:spelldamagetype change:repeating_spell-2:spelldamagetype change:repeating_spell-3:spelldamagetype change:repeating_spell-4:spelldamagetype change:repeating_spell-5:spelldamagetype change:repeating_spell-6:spelldamagetype change:repeating_spell-7:spelldamagetype change:repeating_spell-8:spelldamagetype change:repeating_spell-9:spelldamagetype change:repeating_spell-cantrip:spelldamage2 change:repeating_spell-1:spelldamage2 change:repeating_spell-2:spelldamage2 change:repeating_spell-3:spelldamage2 change:repeating_spell-4:spelldamage2 change:repeating_spell-5:spelldamage2 change:repeating_spell-6:spelldamage2 change:repeating_spell-7:spelldamage2 change:repeating_spell-8:spelldamage2 change:repeating_spell-9:spelldamage2 change:repeating_spell-cantrip:spelldamagetype2 change:repeating_spell-1:spelldamagetype2 change:repeating_spell-2:spelldamagetype2 change:repeating_spell-3:spelldamagetype2 change:repeating_spell-4:spelldamagetype2 change:repeating_spell-5:spelldamagetype2 change:repeating_spell-6:spelldamagetype2 change:repeating_spell-7:spelldamagetype2 change:repeating_spell-8:spelldamagetype2 change:repeating_spell-9:spelldamagetype2 change:repeating_spell-cantrip:spellhealing change:repeating_spell-1:spellhealing change:repeating_spell-2:spellhealing change:repeating_spell-3:spellhealing change:repeating_spell-4:spellhealing change:repeating_spell-5:spellhealing change:repeating_spell-6:spellhealing change:repeating_spell-7:spellhealing change:repeating_spell-8:spellhealing change:repeating_spell-9:spellhealing change:repeating_spell-cantrip:spelldmgmod change:repeating_spell-1:spelldmgmod change:repeating_spell-2:spelldmgmod change:repeating_spell-3:spelldmgmod change:repeating_spell-4:spelldmgmod change:repeating_spell-5:spelldmgmod change:repeating_spell-6:spelldmgmod change:repeating_spell-7:spelldmgmod change:repeating_spell-8:spelldmgmod change:repeating_spell-9:spelldmgmod change:repeating_spell-cantrip:spellsave change:repeating_spell-1:spellsave change:repeating_spell-2:spellsave change:repeating_spell-3:spellsave change:repeating_spell-4:spellsave change:repeating_spell-5:spellsave change:repeating_spell-6:spellsave change:repeating_spell-7:spellsave change:repeating_spell-8:spellsave change:repeating_spell-9:spellsave change:repeating_spell-cantrip:spellsavesuccess change:repeating_spell-1:spellsavesuccess change:repeating_spell-2:spellsavesuccess change:repeating_spell-3:spellsavesuccess change:repeating_spell-4:spellsavesuccess change:repeating_spell-5:spellsavesuccess change:repeating_spell-6:spellsavesuccess change:repeating_spell-7:spellsavesuccess change:repeating_spell-8:spellsavesuccess change:repeating_spell-9:spellsavesuccess change:repeating_spell-cantrip:spellhldie change:repeating_spell-1:spellhldie change:repeating_spell-2:spellhldie change:repeating_spell-3:spellhldie change:repeating_spell-4:spellhldie change:repeating_spell-5:spellhldie change:repeating_spell-6:spellhldie change:repeating_spell-7:spellhldie change:repeating_spell-8:spellhldie change:repeating_spell-9:spellhldie change:repeating_spell-cantrip:spellhldietype change:repeating_spell-1:spellhldietype change:repeating_spell-2:spellhldietype change:repeating_spell-3:spellhldietype change:repeating_spell-4:spellhldietype change:repeating_spell-5:spellhldietype change:repeating_spell-6:spellhldietype change:repeating_spell-7:spellhldietype change:repeating_spell-8:spellhldietype change:repeating_spell-9:spellhldietype change:repeating_spell-cantrip:spell_updateflag change:repeating_spell-1:spell_updateflag change:repeating_spell-2:spell_updateflag change:repeating_spell-3:spell_updateflag change:repeating_spell-4:spell_updateflag change:repeating_spell-5:spell_updateflag change:repeating_spell-6:spell_updateflag change:repeating_spell-7:spell_updateflag change:repeating_spell-8:spell_updateflag change:repeating_spell-9:spell_updateflag change:repeating_spell-cantrip:spellattack change:repeating_spell-1:spellattack change:repeating_spell-2:spellattack change:repeating_spell-3:spellattack change:repeating_spell-4:spellattack change:repeating_spell-5:spellattack change:repeating_spell-6:spellattack change:repeating_spell-7:spellattack change:repeating_spell-8:spellattack change:repeating_spell-9:spellattack change:repeating_spell-cantrip:spellhlbonus change:repeating_spell-1:spellhlbonus change:repeating_spell-2:spellhlbonus change:repeating_spell-3:spellhlbonus change:repeating_spell-4:spellhlbonus change:repeating_spell-5:spellhlbonus change:repeating_spell-6:spellhlbonus change:repeating_spell-7:spellhlbonus change:repeating_spell-8:spellhlbonus change:repeating_spell-9:spellhlbonus change:repeating_spell-npc:spellname_base change:repeating_spell-npc:spellrange change:repeating_spell-npc:spelltarget change:repeating_spell-npc:spelldamage change:repeating_spell-npc:spelldamagetype change:repeating_spell-npc:spelldamage2 change:repeating_spell-npc:spelldamagetype2 change:repeating_spell-npc:spellhealing change:repeating_spell-npc:spelldmgmod change:repeating_spell-npc:spellsave change:repeating_spell-npc:spellsavesuccess change:repeating_spell-npc:spellhldie change:repeating_spell-npc:spellhldietype change:repeating_spell-npc:spell_updateflag change:repeating_spell-npc:spellattack change:repeating_spell-npc:spellhlbonus", function(eventinfo) {
         updateSpell("","",eventinfo);
     });
-    
+
     on("change:npc_name change:npc_type change:npc_ac change:npc_actype change:hp_max change:npc_hpformula change:npc_speed change:strength change:dexterity change:constitution change:intelligence change:wisdom change:charisma change:npc_str_save change:npc_dex_save change:npc_con_save change:npc_int_save change:npc_wis_save change:npc_cha_save change:npc_acrobatics change:npc_animal_handling change:npc_arcana change:npc_athletics change:npc_deception change:npc_history change:npc_insight change:npc_intimidation change:npc_investigation change:npc_medicine change:npc_nature change:npc_perception change:npc_performance change:npc_persuasion change:npc_religion change:npc_sleight_of_hand change:npc_stealth change:npc_survival change:npc_vulnerabilities change:npc_resistances change:npc_immunities change:npc_condition_immunities change:npc_senses change:npc_languages change:npc_challenge change:npc_xp change:npc_legendary_actions change:npcreactionsflag change:npcspellcastingflag", function() {
         updateNPC();
     });
@@ -4825,7 +4837,7 @@
             });
         });
     });
-    
+
     on("change:repeating_spell-cantrip:spellcomp change:repeating_spell-1:spellcomp change:repeating_spell-2:spellcomp change:repeating_spell-3:spellcomp change:repeating_spell-4:spellcomp change:repeating_spell-5:spellcomp change:repeating_spell-6:spellcomp change:repeating_spell-7:spellcomp change:repeating_spell-8:spellcomp change:repeating_spell-9:spellcomp change:repeating_spell-npc:spellcomp", function() {
         getAttrs(["repeating_spell_spellcomp"], function(v) {
             spellv = v.repeating_spell_spellcomp.indexOf("V") > -1 ? "{{v=1}}" : "0"
@@ -4884,11 +4896,11 @@
                 setAttrs({repeating_spell_spellattackinfoflag:"show"});
                 if(!v.repeating_spell_spellattackid) {
                     addspellattack(ourid);
-                } 
+                }
                 else {
                     getSectionIDs("repeating_attack", function(idarray) {
-                        var existingid = _.find(idarray, function(thisid) { 
-                            return (thisid.toLowerCase() === v.repeating_spell_spellattackid.toLowerCase() ) 
+                        var existingid = _.find(idarray, function(thisid) {
+                            return (thisid.toLowerCase() === v.repeating_spell_spellattackid.toLowerCase() )
                         });
                         if(!existingid) {
                             addspellattack(ourid);
@@ -5661,7 +5673,7 @@
                 else {
                     setAttrs({weighttotal: wtotal});
                 }
-                
+
             });
         });
 
@@ -5709,7 +5721,7 @@
                     setAttrs({ac: 10 + Math.floor((parseInt(v.dexterity, 10) - 10) / 2)})
                 });
             }
-            
+
         });
     }
 
@@ -5865,7 +5877,7 @@
                     else {
                         newrowattrs["repeating_attack_" + newrowid + "_dmgattr"] = "0";
                     }
-                } 
+                }
                 else if(!v.repeating_spell_spelldamage2 || v.repeating_spell_spelldamage2 === "") {
                     newrowattrs["repeating_attack_" + newrowid + "_dmg2flag"] = "{{damage=1}} {{dmg2flag=1}}";
                     newrowattrs["repeating_attack_" + newrowid + "_dmg2base"] = v.repeating_spell_spellhealing;
@@ -5907,9 +5919,9 @@
             var full = ["Bard","Cleric","Druid","Sorcerer","Wizard","full"];
             var half = ["Paladin","Ranger","half"];
             var finallevel = (v.base_level && v.base_level > 0) ? parseInt(v.base_level,10) : 1;
-            
+
             if(v.multiclass1_flag && v.multiclass1_flag === "1") {
-                finallevel = finallevel + parseInt(v.multiclass1_lvl,10); 
+                finallevel = finallevel + parseInt(v.multiclass1_lvl,10);
                 multiclass = true;
                 if(full.indexOf(v.multiclass1) != -1) {
                     m1casterlevel = parseInt(v.multiclass1_lvl,10)
@@ -5927,7 +5939,7 @@
                 m1hitdie = "|" + v.multiclass1 + "," + m1hd;
             };
             if(v.multiclass2_flag && v.multiclass2_flag === "1") {
-                finallevel = finallevel + parseInt(v.multiclass2_lvl,10); 
+                finallevel = finallevel + parseInt(v.multiclass2_lvl,10);
                 multiclass = true;
                 if(full.indexOf(v.multiclass2) != -1) {
                     m2casterlevel = parseInt(v.multiclass2_lvl,10)
@@ -5945,7 +5957,7 @@
                 m2hitdie = "|" + v.multiclass2 + "," + m2hd;
             };
             if(v.multiclass3_flag && v.multiclass3_flag === "1") {
-                finallevel = finallevel + parseInt(v.multiclass3_lvl,10); 
+                finallevel = finallevel + parseInt(v.multiclass3_lvl,10);
                 multiclass = true;
                 if(full.indexOf(v.multiclass3) != -1) {
                     m3casterlevel = parseInt(v.multiclass3_lvl,10)
@@ -5962,7 +5974,7 @@
                 else if (d6class.indexOf(v.multiclass3) != -1) {m3hd = "6"};
                 m3hitdie = "|" + v.multiclass3 + "," + m3hd;
             };
-            
+
             if(multiclass === false) {
                 if(full.indexOf(charclass) != -1) {
                     casterlevel = finallevel
@@ -5988,17 +6000,17 @@
                 casterlevel = casterlevel + m1casterlevel + m2casterlevel + m3casterlevel
                 hitdie_final = "?{Hit Die Class|" + charclass + ",@{hitdietype}" + m1hitdie + m2hitdie + m3hitdie + "}"
             }
-            
+
             setAttrs({
                level: finallevel,
                caster_level: casterlevel,
                hitdie_final: hitdie_final
             });
-            
+
             updateSpellSlots(casterlevel);
         });
     }
-    
+
     var updateClass = function() {
         getAttrs(["class","base_level","custom_class","cust_classname","cust_hitdietype","cust_spellcasting_ability","cust_strength_save_prof","cust_dexterity_save_prof","cust_constitution_save_prof","cust_intelligence_save_prof","cust_wisdom_save_prof","cust_charisma_save_prof","strength_save_prof","dexterity_save_prof","constitution_save_prof","intelligence_save_prof","wisdom_save_prof","charisma_save_prof"], function(v) {
             if(v.custom_class && v.custom_class != "0") {
@@ -6174,7 +6186,7 @@
         });
         setlevel();
     };
-    
+
     var updateTool = function() {
         getAttrs(["repeating_tool_toolname_base","repeating_tool_toolbonus_base","level","repeating_tool_toolattr_base","strength","dexterity","constitution","intelligence","wisdom","charisma"], function(v) {
             pb = (Math.ceil((v.level)/1e10) + Math.ceil((v.level)/4))
@@ -6190,7 +6202,7 @@
             });
         });
     };
-    
+
     var updateAttack = function(eventinfo) {
         var sourcetype = eventinfo.sourceType;
         var attackid = eventinfo.sourceAttribute.substring(17, 37);
@@ -6207,7 +6219,7 @@
             var magicattackmod = 0;
             var spelllevel = "";
             if(v.repeating_attack_spellid && v.repeating_attack_spellid != "") {
-                spellattack = true; 
+                spellattack = true;
                 magicattackmod = parseInt(v.globalmagicmod, 10);
                 spelllevel = "{{spelllevel=" + v["repeating_attack_spellid"].split("_")[0].substr(1) + "}}";
             };
@@ -6314,19 +6326,19 @@
             }
             if(v.dtype === "full") {
                 pickbase = "full";
-                rollbase = "@{wtype}&{template:atkdmg} {{mod=@{atkbonus}}} {{rname=@{atkname}}} {{r1=[[@{hidden_r1base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{hidden_r2base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} {{crit1=[[@{hidden_crit1}]]}} {{crit2=[[@{hidden_crit2}]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{spelllevel} ammo=@{ammo} @{charname_output}";
+                rollbase = "@{wtype}&{template:npcaction} {{mod=@{atkbonus}}} {{rname=@{atkname}}} {{r1=[[@{hidden_r1base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{hidden_r2base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} {{crit1=[[@{hidden_crit1}]]}} {{crit2=[[@{hidden_crit2}]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{spelllevel} ammo=@{ammo} @{charname_output}";
             }
             else if(v.repeating_attack_atkflag && v.repeating_attack_atkflag != 0) {
                 pickbase = "pick";
-                rollbase = "@{wtype}&{template:atk} {{mod=@{atkbonus}}} {{rname=[@{atkname}](~repeating_attack_attack_dmg)}} {{rnamec=[@{atkname}](~repeating_attack_attack_crit)}} {{r1=[[@{hidden_r1base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{hidden_r2base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} {{range=@{atkrange}}} {{desc=@{atk_desc}}} @{spelllevel} ammo=@{ammo} @{charname_output}";
+                rollbase = "@{wtype}&{template:npcatk} {{mod=@{atkbonus}}} {{rname=[@{atkname}](~repeating_attack_attack_dmg)}} {{rnamec=[@{atkname}](~repeating_attack_attack_crit)}} {{r1=[[@{hidden_r1base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} @{hidden_r2base}@{halflingluck}cs>@{atkcritrange}@{hidden_atkbonus}]]}} {{range=@{atkrange}}} {{desc=@{atk_desc}}} @{spelllevel} ammo=@{ammo} @{charname_output}";
             }
             else if(v.repeating_attack_dmgflag && v.repeating_attack_dmgflag != 0) {
                 pickbase = "dmg";
-                rollbase = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{spelllevel} ammo=@{ammo} @{charname_output}"
+                rollbase = "@{wtype}&{template:npcdmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[@{hidden_dmg1}]]}} {{dmg1type=@{hidden_dmg1type}}} @{dmg2flag} {{dmg2=[[@{hidden_dmg2}]]}}} {{dmg2type=@{hidden_dmg2type}}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} @{spelllevel} ammo=@{ammo} @{charname_output}"
             }
             else {
                 pickbase = "empty";
-                rollbase = "@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{saveflag} {{desc=@{atk_desc}}} @{spelllevel} ammo=@{ammo} @{charname_output}"
+                rollbase = "@{wtype}&{template:npcdmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{saveflag} {{desc=@{atk_desc}}} @{spelllevel} ammo=@{ammo} @{charname_output}"
             }
             update["repeating_attack_atkname"] = name;
             update["repeating_attack_atkbonus"] = bonus;
@@ -6370,7 +6382,7 @@
             setAttrs(update);
         });
     };
-    
+
     var updateSpell = function(spellid, category, eventinfo, forceupdate) {
         var sourcetype = eventinfo ? eventinfo.sourceType : "";
         var cat = category ? "-" + category : "";
@@ -6462,7 +6474,7 @@
                             else {
                                 quietupdate["repeating_attack_" + atkid + "_dmgattr"] = "0";
                             }
-                        } 
+                        }
                         else if(!v["repeating_spell" + cat + "_" + repid + "spelldamage2"] || v["repeating_spell" + cat + "_" + repid + "spelldamage2"] === "") {
                             quietupdate["repeating_attack_" + atkid + "_dmg2flag"] = "{{damage=1}} {{dmg2flag=1}}";
                             quietupdate["repeating_attack_" + atkid + "_dmg2base"] = v["repeating_spell" + cat + "_" + repid + "spellhealing"];
@@ -6490,7 +6502,7 @@
             setAttrs(update);
         });
     };
-    
+
     var updateSpellSlots = function(lvl) {
         if(lvl < 1) {
             l1 = 0; l2 = 0; l3 = 0; l4 = 0; l5 = 0; l6 = 0; l7 = 0; l8 = 0;  l9 = 0;
@@ -6506,7 +6518,7 @@
             if(lvl < 15) {l8 = 0;} else {l8 = 1;};
             if(lvl < 17) {l9 = 0;} else {l9 = 1;};
         }
-        
+
         setAttrs({
             lvl1_slots_total: l1,
             lvl2_slots_total: l2,
@@ -6519,7 +6531,7 @@
             lvl9_slots_total: l9
         });
     };
-    
+
     var updateNPC = function() {
         getAttrs(["npc_name","npc_type","npc_ac","npc_actype","hp_max","npc_hpformula","npc_speed","strength","dexterity","constitution","intelligence","wisdom","charisma","npc_str_save","npc_dex_save","npc_con_save","npc_int_save","npc_wis_save","npc_cha_save","npc_acrobatics","npc_animal_handling","npc_arcana","npc_athletics","npc_deception","npc_history","npc_insight","npc_intimidation","npc_investigation","npc_medicine","npc_nature","npc_perception","npc_performance","npc_persuasion","npc_religion","npc_sleight_of_hand","npc_stealth","npc_survival","npc_vulnerabilities","npc_resistances","npc_immunities","npc_condition_immunities","npc_senses","npc_languages","npc_challenge","npc_xp","npc_legendary_actions","npcreactionsflag","npcspellcastingflag"], function(v) {
             var rollbase = "";
@@ -6667,7 +6679,7 @@
             });
         });
     };
-    
+
     var updateNPCaction = function(eventinfo) {
         getAttrs(["repeating_npcaction_name","repeating_npcaction_attack_flag","repeating_npcaction_attack_type","repeating_npcaction_attack_range","repeating_npcaction_attack_target","repeating_npcaction_attack_tohit","repeating_npcaction_attack_damage","repeating_npcaction_attack_damagetype","repeating_npcaction_attack_damage2","repeating_npcaction_attack_damagetype2","repeating_npcaction_description","dtype"], function(v) {
             var onhit = "";
@@ -6739,7 +6751,7 @@
             else {
                 rollbase = "@{wtype}&{template:npcaction} {{name=@{npc_name}}} {{rname=@{name}}} {{description=@{description}}} @{charname_output}"
             }
-            
+
             setAttrs({
                 repeating_npcaction_name_display: v.repeating_npcaction_name + ".",
                 repeating_npcaction_attack_display_flag: attack_flag,
@@ -6826,7 +6838,7 @@
                 });
             }
         });
-            
+
         getSectionIDs("repeating_npcaction", function(idarray) {
             cleanarray = idarray.filter(function(el) {
                 return legendaryarray.indexOf(el) < 0;
@@ -7484,7 +7496,7 @@
         force_refresh_attacks();
         doneupdating();
     }
-    
+
     var versioning = function() {
         getAttrs(["version"], function(v) {
             if(!v["version"] || v["version"] === "") {
@@ -7503,7 +7515,7 @@
                     setAttrs({version: "1.2"});
                     versioning();
                 });
-                
+
             }
             else if(v["version"] === "1.2") {
                 console.log("UPGRADING TO v1.3");
@@ -7511,7 +7523,7 @@
                     setAttrs({version: "1.3"});
                     versioning();
                 });
-                
+
             }
             else if(v["version"] === "1.3") {
                 console.log("UPGRADING TO v1.4");
@@ -7533,5 +7545,5 @@
             }
         });
     };
-    
+
 </script>
